@@ -114,6 +114,7 @@ Increasing this number may improve performance."
 (defun mpages-open-today ()
   "Open a Morning Pages file for today."
   (find-file (concat (file-name-as-directory mpages-content-directory) (format-time-string "%Y%m%d") ".txt"))
+  (centered-window-mode)
   (auto-fill-mode)
   (set-fill-column 80))
 
