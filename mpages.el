@@ -65,8 +65,8 @@ Increasing this number may improve performance."
   "Colorize the NUM based on being above/below THRESHOLD."
   (let ((numstr (number-to-string num)))
     (if (< num threshold)
-        (propertize numstr 'face '(:foreground "red"))
-      (propertize numstr 'face '(:foreground "green")))))
+        (propertize numstr 'face '(:foreground "red" :underline nil :strikethrough nil))
+      (propertize numstr 'face '(:foreground "green" :underline t :strikethrough t)))))
 
 (defun mpages-word-count-string (time-elapsed word-count)
   "Generate header line format string for TIME-ELAPSED and WORD-COUNT."
